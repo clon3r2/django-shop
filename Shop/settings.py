@@ -228,7 +228,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'Shop.urls'
+ROOT_URLCONF = 'entrypoints.rest_server.urls'
 
 TEMPLATES = [
     {
