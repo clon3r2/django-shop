@@ -14,6 +14,9 @@ class User(AbstractUser):
 
     objects = CustomUserManager()
 
+    class Meta(AbstractUser.Meta):
+        swappable = "AUTH_USER_MODEL"
+
     def __str__(self):
         return self.email
 
