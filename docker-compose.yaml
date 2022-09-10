@@ -6,18 +6,13 @@ services:
     container_name: shop_backend
     restart: always
     volumes:
-      - ${APP_BASE_DIR}:/code/
-      - ${APP_BASE_DIR}/volumes/logs:/code/lib/logs/
-      - ${APP_BASE_DIR}/volumes/media:/code/lib/media/
+      - ./:/code/
+      - ./volumes/logs:/code/lib/logs/
+      - ./volumes/media:/code/lib/media/
     env_file:
       - .env
     ports:
       - "8000:8000"
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "10M"
-        max-file: "2"
     entrypoint: python3 manage.py
     command: runserver 0.0.0.0:8000
     depends_on:
