@@ -38,6 +38,7 @@ INSTALLED_APPS = [
 
     'apps.account',
     'apps.core',
+    'apps.product',
 
     "rest_framework",
     'rest_framework.authtoken',
@@ -172,3 +173,5 @@ LOGGING = {
         'propagate': True
     }
 }
+
+APPEND_SLASH = False
